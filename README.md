@@ -53,7 +53,7 @@ int Search(struct BST* RootPtr, int item){
     }
 }
 
-void main(){
+int main(){
     struct BST* RootPtr = NULL;
     int item, cont, key;
     do{
@@ -71,4 +71,5 @@ void main(){
     else{
         printf("\nNot Found\n");
     }
+    return 0;
 }
