@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <omp.h>
 
 void swap(int *a, int *b);
 int partition(int *a, int l, int h);
@@ -66,8 +67,15 @@ void quick_sort(int a[], int l, int h)
     if (l < h)
     {
         p = partition(a, l, h);
-        quick_sort(a, l, p - 1);
-        quick_sort(a, p + 1, h);
+
+        #pragma omp parallel sections
+        {
+            #pragma omp section
+            quick_sort(a, l, p - 1);
+
+            #pragma omp section
+            quick_sort(a, p + 1, h);
+        }
     }
 
     return;
