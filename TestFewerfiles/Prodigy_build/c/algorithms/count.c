@@ -2,33 +2,30 @@
 #include <stdlib.h>
 #include <ctype.h>
 
-int count(int num) 
-{
-    printf("[");
+void count(int num) {
+    printf("<html>\n");
+    printf("<body>\n");
+    printf("<h1>Count:</h1>\n");
+    printf("<ul>\n");
     
-    if(num > 20)
-    {
-        int i;
-        for(i = 0; i < num; i++)
-            printf("\n%d, \n", i);
-            
-        if(i == num + 1)
-            printf("]");
-    } else
-    {
-        int i;
-        for(i = 0; i < num; i++)
-            printf("%d", i);
-            
-        if(i == num)
-            printf("]");
+    if(num > 20) {
+        for(int i = 0; i < num; i++) {
+            printf("<li>%d</li>\n", i);
+        }
+    } else {
+        for(int i = 0; i < num; i++) {
+            printf("<li>%d</li>", i);
+        }
     }
+    
+    printf("</ul>\n");
+    printf("</body>\n");
+    printf("</html>\n");
 }
 
-int main()
-{
+int main() {
     int num;
-    printf("Count:~$ ");
+    printf("Enter a number: ");
     scanf("%d", &num);
     count(num);
     return 0;
