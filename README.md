@@ -1,27 +1,33 @@
 # Prodigy Build Project
 
-This repository contains several algorithms implemented in C language, with good practices and standards. Moreover, it incorporates multiple data structures definitions for efficient computation. The codebase includes a setup for test cases as well as examples of command-line user interfaces. 
+[//]: # (Brief introduction)
 
-If anyone wishes to contribute, kindly refer to the `CONTRIBUTING.md` for the rules and guidelines.
+This repository is a collection of algorithms in C along with data structures and test case setup. The programs include features from basic mathematical operations to creating and manipulating various data structures like Binary Search Trees, Linked Lists, etc.
 
 ## Prerequisites
 
-* A C compiler, for example, GCC or Clang
+The following software are required to run the programs locally:
+
+* GCC or Clang - C language compiler
 * GNU Make build automation tool
 
-For macOS:
+You can install them using the below commands:
+
+For macOS, brew can be used to install:
+
 ```bash
 brew install gcc
 brew install make
 ```
 
-For Ubuntu:
+For Ubuntu, use the following commands:
+
 ```bash
 sudo apt-get install gcc
 sudo apt-get install make
 ```
 
-For Windows (via [MinGW](http://www.mingw.org/)):
+For Windows, the packages can be installed using [MinGW](http://www.mingw.org/):
 
 1. Download MinGW installer from the website
 2. Run the installer and choose `gcc` and `make` packages to install
@@ -29,26 +35,39 @@ For Windows (via [MinGW](http://www.mingw.org/)):
 
 ## Installation
 
-After cloning/downloading the repository, navigate to the project directory. Compile the required file by invoking the compiler directly e.g., `gcc -o outputfile inputfile.c`.
+Once you have cloned or downloaded the repository, navigate to the project directory from your terminal or command prompt. If the code has an associated makefile, you can compile it by simply running the `make` command.
 
-Alternatively, if there's an associated makefile, run the `make` command.
+```bash
+make
+```
+
+In the absence of a makefile, use the following format to compile:
+
+```bash
+gcc -o outputfile inputfile.c
+```
 
 ## Usage
 
-To run any algorithm:
+To run any compiled C program, use the following format:
+
 ```bash
 ./compiled_file
 ```
-Replace `compiled_file` with the actual file you want to execute.
+
+Replace `compiled_file` with the actual file you want to run.
 
 ## Testing
 
-To run any tests written, use the same command as above pointing it to the compiled test file.
+To run any test cases defined in the repository, use the same command as above, pointing to the compiled test file.
 
 ## Deployments / CI / CD
 
-Deployment processes, including continuous integration and continuous deployment, will be mentioned in the CI/CD pipeline respective section. 
+Any details regarding Continuous Integration and Continuous Deployment processes will be documented in the respective CI/CD pipeline sections.
 
 ## Environment Variables
 
-At present, no environment variables are needed. If required in the future, a `.env.example` file will be added to the project, outlining the necessary variables.
+No environment variables are required to run the programs in this repository currently. If any are needed in future, a `.env.example` file will be created with necessary variable names mentioned.
+
+For queries or contributions, refer to `CONTRIBUTING.md` for guidelines.
+
