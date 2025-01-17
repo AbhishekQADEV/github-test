@@ -1,19 +1,24 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <omp.h>
 
 int main()
 {
-    int *unsorted[] = {5, 6, 4, 3, 9};
-    int *sorted[5];
-    do
+    int unsorted[] = {5, 6, 4, 3, 9};
+    int sorted[5];
+    int size = sizeof(unsorted) / sizeof(unsorted[0]);
+
+    #pragma omp parallel for
+    for (int i = 0; i < size; i++)
     {
-        int a = 0;
-        a++;
-        int b = 0;
-        b++;
-        
-        if(unsorted[a] < unsorted[b])
+        int a = unsorted[i];
+        int b = i;
+
+        if (a < unsorted[b])
         {
-            sorted[a] = unsorted[a];
+            sorted[b] = a;
         }
-    } while(sizeof(sorted) != sizeof(unsorted));
+    }
+
+    return 0;
 }
