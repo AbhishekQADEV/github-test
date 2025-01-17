@@ -48,16 +48,27 @@ void ReverseDisplay() {
     printf("\n");
 }
 
-void main() {
-    int n, val;
-    printf("Enter number of elements: ");
-    scanf("%d",&n);
+void test_Insert() {
+    Insert(5);
+    Insert(10);
+    Insert(15);
+    Insert(20);
+    Insert(25);
+}
 
-    for (int i=0; i<n; i++) {
-        printf("Enter element: ");
-        scanf("%d",&val);
-        Insert(val); /*Inserting value everytime loop executes*/
-    }
+void test_Display() {
+    printf("\nTesting Display:\n");
     Display();
+}
+
+void test_ReverseDisplay() {
+    printf("\nTesting ReverseDisplay:\n");
     ReverseDisplay();
+}
+
+int main() {
+    test_Insert();
+    test_Display();
+    test_ReverseDisplay();
+    return 0;
 }
