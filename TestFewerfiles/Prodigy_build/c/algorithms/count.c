@@ -9,10 +9,12 @@ void count(int num) {
     printf("<ul>\n");
     
     if(num > 20) {
+        #pragma omp parallel for
         for(int i = 0; i < num; i++) {
             printf("<li>%d</li>\n", i);
         }
     } else {
+        #pragma omp parallel for
         for(int i = 0; i < num; i++) {
             printf("<li>%d</li>", i);
         }
