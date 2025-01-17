@@ -1,6 +1,6 @@
 # Prodigy Build Project
 
-This repository contains several algorithms implemented in C language, with good practices and standards. Moreover, it incorporates multiple data structures definitions for efficient computation. The codebase includes a setup for test cases as well as examples of command-line user interfaces. 
+This repository contains several algorithms implemented in C language, with good practices and standards. Moreover, it incorporates multiple data structures definitions for efficient computation. The codebase includes a setup for test cases as well as examples of command-line user interfaces.
 
 If anyone wishes to contribute, kindly refer to the `CONTRIBUTING.md` for the rules and guidelines.
 
@@ -47,7 +47,7 @@ To run any tests written, use the same command as above pointing it to the compi
 
 ## Deployments / CI / CD
 
-Deployment processes, including continuous integration and continuous deployment, will be mentioned in the CI/CD pipeline respective section. 
+Deployment processes, including continuous integration and continuous deployment, will be mentioned in the CI/CD pipeline respective section.
 
 ## Environment Variables
 
