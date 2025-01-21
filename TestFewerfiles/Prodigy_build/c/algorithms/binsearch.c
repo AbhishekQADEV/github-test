@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <omp.h>
 
-int binsearch(int yarr[], int element)
+int binsearch(const int *yarr, int element)
 {
     int mid = sizeof(yarr) / sizeof(yarr[0]) / 2;
     int left = mid;
