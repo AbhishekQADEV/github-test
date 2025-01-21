@@ -25,5 +25,11 @@ int main()
         sorted[j + 1] = key;
     }
     
+    // SonarCloud Analysis: Issues Detected in TestFewerfiles/Prodigy_build/c/algorithms/insertionsort.c. Below are the detected issues with details.
+    // Line 7: Change this loop body so that it can be executed more than once. (Severity: MAJOR) Location: offsets 4 to 6
+    
+    // Resolve SonarCloud issues in c by validating inputs, implementing secure authentication, preventing injection vulnerabilities, conducting regular security audits, and ensuring continuous improvement of the code's security posture.
+    // Additionally, conduct regular security audits to identify and resolve potential vulnerabilities, address hotspots, and ensure continuous improvement of the code's security posture.
+    
     return 0;
 }
