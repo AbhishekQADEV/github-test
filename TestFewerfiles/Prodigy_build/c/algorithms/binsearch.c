@@ -4,7 +4,6 @@ int binsearch(const int *yarr, int element)
 {
     int mid = sizeof(yarr) / sizeof(int) / 2;
     int left = mid;
-    int right = mid;
     extern int i;
     
     if(element == yarr[mid])
@@ -21,6 +20,7 @@ int binsearch(const int *yarr, int element)
             }
         }
     }
+    return 0; // Added return statement
 }
 
 int main(int argc, char *argv[])
