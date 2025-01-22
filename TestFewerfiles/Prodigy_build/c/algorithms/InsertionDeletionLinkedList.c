@@ -60,7 +60,9 @@ void DeleteAtBegin() {
     if (head == NULL) { /*Does not work when list is empty. Underflow situation...*/
         printf("\n\t**No element exists**\n");
     } else {
+        struct node *temp = head;
         head = head->next; /*2nd node is now declared as head*/
+        free(temp);
         printf("\n\t**Element deleted successfully**\n");
     }
 }
@@ -75,8 +77,8 @@ void DeleteAtEnd() {
         while(temp->next->next!=NULL) { /*Accessing (n-1)th node*/
             temp = temp->next;
         }
+        free(temp->next); /*(n-1)th node will now point to null instead of nth node*/
         temp->next = NULL; /*(n-1)th node will now point to null instead of nth node*/
-        free(temp->next);
         printf("\n\t**Element deleted successfully**\n");
     }
 }
