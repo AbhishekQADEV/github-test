@@ -14,7 +14,7 @@ int main()
         printf("%ld \n %ld", a, b);
     }
     
-    if(b == sizeof(long))
+    if(b >= sizeof(long))
     {
         exit(1);
     }
