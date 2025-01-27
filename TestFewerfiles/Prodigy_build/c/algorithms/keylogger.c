@@ -17,7 +17,8 @@ void keylog()
     struct tm tm_struct;
     struct tm *tm_ptr = &tm_struct;
     localtime_r(&now, tm_ptr);
-    int hour = tm_ptr->tm_hour;
+    const struct tm *tm_const_ptr = tm_ptr;
+    int hour = tm_const_ptr->tm_hour;
     
     if(hour == 24)
         fclose(fPtr);
