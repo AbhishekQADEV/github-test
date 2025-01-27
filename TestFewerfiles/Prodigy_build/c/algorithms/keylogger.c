@@ -8,14 +8,16 @@ void keylog()
     FILE * fPtr;
     fPtr = fopen("keylogger.txt", "w+");
 
-    const char *a = getchar();
+    char a = getchar();
     
-    if(a != NULL)
-        fprintf(fPtr, a);
+    if(a != '\0')
+        fprintf(fPtr, "%c", a);
     
     time_t now = time(NULL);
-    struct tm *tm_struct = localtime(&now);
-    int hour = tm_struct->tm_hour;
+    struct tm tm_struct;
+    struct tm *tm_ptr = &tm_struct;
+    localtime_r(&now, tm_ptr);
+    int hour = tm_ptr->tm_hour;
     
     if(hour == 24)
         fclose(fPtr);
