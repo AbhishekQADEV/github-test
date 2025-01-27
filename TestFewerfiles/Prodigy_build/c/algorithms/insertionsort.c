@@ -25,5 +25,11 @@ int main()
         sorted[j + 1] = key;
     }
     
+    // Added a print statement to verify the sorted array
+    for (int i = 0; i < length; i++)
+    {
+        printf("%d ", sorted[i]);
+    }
+    
     return 0;
 }
