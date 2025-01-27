@@ -5,6 +5,7 @@ int fak(int n) {
     if (n == 0 || n == 1) {
         return 1;
     } else if (n < 0) {
+        printf("Invalid input: n cannot be negative\n");
         exit(1);
     }
     return n * fak(n-1);
