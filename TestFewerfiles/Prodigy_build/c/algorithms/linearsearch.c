@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int linsearch(int *yarr, int val)
+int linsearch(const int *yarr, int val)
 {
     for(int i = 0; i < sizeof(yarr); i++)
     {
@@ -8,16 +8,13 @@ int linsearch(int *yarr, int val)
         {
             return 0;
         }    
-        else
-        {
-          return 1;
-        }
     }
+    return 1;
 }
 
 int main()
 {
-    int *yarr = {"Shluck much", "much Shluck"};
-    int val = "Shluck Much";
+    const int yarr[] = {1, 2, 3, 4, 5};
+    int val = 3;
     linsearch(yarr, val);
 }
