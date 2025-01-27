@@ -43,7 +43,9 @@ void swap(int *a, int *b)
 
 int partition(int *a, int l, int h)
 {
-    int i = l, j = l, p = h;
+    int i = l;
+    int j = l;
+    int p = h;
 
     while (i < h)
     {
