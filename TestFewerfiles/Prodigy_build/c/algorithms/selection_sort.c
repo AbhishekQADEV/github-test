@@ -22,9 +22,9 @@ void swap(int *a, int *b)
     *b = tmp;
 }
 
-int *find_min(int *ptr, int size)
+const int *find_min(const int *ptr, int size)
 {
-    int *min;
+    const int *min;
 
     min = ptr;
     while(size--)
@@ -38,14 +38,14 @@ int *find_min(int *ptr, int size)
 
 void selection_sort(int *ptr, int size)
 {
-    int *min;
+    const int *min;
 
     while(--size)
     {
         if((min = find_min(ptr + 1, size)))
         {
             if(*ptr > *min)
-                swap(ptr, min);
+                swap(ptr, (int *)min);
         }
         ptr++;
     }
