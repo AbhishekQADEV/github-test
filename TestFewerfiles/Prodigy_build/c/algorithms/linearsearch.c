@@ -2,7 +2,7 @@
 
 int linsearch(const int *yarr, int val)
 {
-    for(int i = 0; i < sizeof(yarr); i++)
+    for(int i = 0; i < sizeof(yarr)/sizeof(int); i++)
     {
         if(yarr[i] == val)
         {
