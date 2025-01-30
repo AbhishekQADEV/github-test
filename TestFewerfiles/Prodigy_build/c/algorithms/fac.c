@@ -17,7 +17,13 @@ int main() {
     printf("fak(4): %d\n", fak(4));
     printf("fak(5): %d\n", fak(5));
     
-    printf("fak(-1): %d\n", fak(-1));
+    // Validate input for negative numbers
+    int result = fak(-1);
+    if (result < 0) {
+        printf("Invalid input: negative number\n");
+    } else {
+        printf("fak(-1): %d\n", result);
+    }
 
     return 1;
 }
