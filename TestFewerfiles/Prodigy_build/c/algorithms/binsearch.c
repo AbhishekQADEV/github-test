@@ -23,6 +23,7 @@ int binsearch(const int *yarr, int element)
             printf("%d", yarr[i]);
         }
     }
+    return 0; // Added return statement
 }
 
 int main(int argc, char *argv[])
